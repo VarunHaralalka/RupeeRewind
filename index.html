@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RupeeRewind</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="heading">Understand your money's worth!</h1>
+    <div class="container">
+        <form id="inflation-section" class="section">
+            <h2>Inflation Adjustment</h2>
+            <label for="year">Select Year:</label>
+            <select id="year">
+            </select>
+
+            <label for="amount">Enter Amount (₹):</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+
+            <button type="button" onclick="calculateInflation()">Calculate Equivalent in 2024</button>
+
+            <p id="inflationResult"></p>
+            <p id="inflationIncrease"></p>
+        </form>
+
+        <form id="interest-section" class="section">
+            <h2>Future Value Calculator</h2>
+            <label for="futureAmount">Enter Initial Amount (₹):</label>
+            <input type="number" id="futureAmount" placeholder="Enter initial amount" required>
+
+            <label for="years">Enter Number of Years:</label>
+            <input type="number" id="years" placeholder="Enter number of years" required>
+
+            <label for="interestRate">Interest/Inflation Rate (%):</label>
+            <input type="number" id="interestRate" placeholder="Enter custom rate (optional)">
+            <small>Leave blank to use predicted rate of 5%</small>
+
+            <button type="button" onclick="calculateFutureValue()">Calculate Future Value</button>
+
+            <p id="futureResult"></p>
+            <p id="futureIncrease"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
