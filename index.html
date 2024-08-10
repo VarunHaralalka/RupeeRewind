@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RupeeRewind</title>
+    <title>RupeeRewind - Understand Your Money's Worth!</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1 id="heading">Understand your money's worth!</h1>
+    <div id="heading">Understand Your Money's Worth!</div>
+    
+    <div class="info section">
+        <h2 class="topic">Inflation</h2>
+        <p>Inflation refers to the rate at which the general level of prices for goods and services rises, eroding purchasing power. Over time, as inflation increases, each unit of currency buys fewer goods and services.</p>
+
+        <h2 class="topic">Consumer Price Index (CPI)</h2>
+        <p>The Consumer Price Index (CPI) is a measure that examines the weighted average of prices of a basket of consumer goods and services, such as transportation, food, and medical care. CPI is commonly used to gauge inflation.</p>
+
+        <h2 class="topic">Purchasing Power</h2>
+        <p>Purchasing power is the value of a currency expressed in terms of the amount of goods or services that one unit of money can buy. When inflation rises, purchasing power falls, meaning you can buy less with the same amount of money.</p>
+    </div>
+
     <div class="container">
         <form id="inflation-section" class="section">
             <h2>Inflation Adjustment</h2>
@@ -22,6 +35,9 @@
 
             <p id="inflationResult"></p>
             <p id="inflationIncrease"></p>
+            <p id="averageInflationRate"></p>
+
+            <canvas id="inflationChart"></canvas>
         </form>
 
         <form id="interest-section" class="section">
@@ -40,9 +56,10 @@
 
             <p id="futureResult"></p>
             <p id="futureIncrease"></p>
+
+            <canvas id="futureChart"></canvas>
         </form>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
